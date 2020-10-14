@@ -1,6 +1,9 @@
 import express from 'express';
+import connectDB from './config/db';
 
 const app = express();
+
+connectDB();
 
 app.get('/', (req, res) => res.send('http get request successfully sent to root api endpoint'));
 
