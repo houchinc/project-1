@@ -5,6 +5,8 @@ const app = express();
 
 connectDB();
 
+app.use(express.json({extended:false}));
+
 app.get('/', (req, res) => res.send('http get request successfully sent to root api endpoint'));
 
 app.post('/api/users', (req, res) => {
